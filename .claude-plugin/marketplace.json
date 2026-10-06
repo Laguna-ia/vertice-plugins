@@ -1,0 +1,22 @@
+{
+  "name": "laguna",
+  "description": "Plugins Vértice da Laguna AI (CRM e Pulso)",
+  "owner": {
+    "name": "Laguna",
+    "url": "https://lagunaai.org"
+  },
+  "plugins": [
+    {
+      "name": "vertice-crm",
+      "source": "./plugins/vertice-crm",
+      "description": "CRM da Vértice: contas, oportunidades, atividades, reuniões e tarefas.",
+      "version": "1.1.0"
+    },
+    {
+      "name": "vertice-pulso",
+      "source": "./plugins/vertice-pulso",
+      "description": "Vértice Pulso: dados de uso do produto da Vértice (contas, usuários, convites, eventos, integrações, logs e limites contratados), em SQL somente leitura.",
+      "version": "1.1.0"
+    }
+  ]
+}

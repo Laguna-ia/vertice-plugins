@@ -1,0 +1,32 @@
+{
+  "name": "laguna",
+  "interface": {
+    "displayName": "Laguna"
+  },
+  "plugins": [
+    {
+      "name": "vertice-crm",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vertice-crm"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "vertice-pulso",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vertice-pulso"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

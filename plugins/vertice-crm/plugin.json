@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vertice-crm",
+  "version": "1.1.0",
+  "description": "CRM da Vértice: contas, oportunidades, atividades, reuniões e tarefas.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa",
+  "keywords": [
+    "crm",
+    "mcp",
+    "vertice"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Vértice CRM",
+        "shortDescription": "CRM de contas e oportunidades",
+        "longDescription": "Conecta o ChatGPT ao CRM da Vértice: contas, contatos, leads, campanhas, oportunidades, atividades, reuniões, transcrições, documentos e tarefas. Login pela conta Laguna. Escritas (tarefas, notas e correção de oportunidade) afetam apenas a sua carteira e exigem sua aprovação. Os dados de uso do produto estão no plugin Vértice Pulso.",
+        "developerName": "Laguna AI",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://lagunaai.org/plataforma/empresa",
+        "privacyPolicyURL": "https://lagunaai.org/plataforma/privacidade",
+        "termsOfServiceURL": "https://lagunaai.org/plataforma/termos",
+        "defaultPrompt": [
+          "Quais oportunidades abertas têm fechamento previsto até o fim do mês e quais estão sem próximo passo definido?",
+          "Resuma a negociação com o Grupo Horizonte: reuniões, pessoas envolvidas, valor registrado e riscos, citando as fontes."
+        ],
+        "brandColor": "#126B60",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
