@@ -1,0 +1,22 @@
+{
+  "name": "vertice-drive",
+  "version": "1.2.0",
+  "description": "Vértice Drive: arquivos da empresa (somente leitura) e a sua pasta, onde o assistente salva documentos e planilhas.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa/drive",
+  "keywords": [
+    "drive",
+    "arquivos",
+    "mcp",
+    "vertice"
+  ],
+  "mcpServers": {
+    "vertice-drive": {
+      "type": "http",
+      "url": "https://lagunaai.org/api/mcp/drive"
+    }
+  }
+}
