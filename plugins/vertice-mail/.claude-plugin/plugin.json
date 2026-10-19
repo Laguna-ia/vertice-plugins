@@ -1,0 +1,22 @@
+{
+  "name": "vertice-mail",
+  "version": "1.4.0",
+  "description": "Vértice Mail: a caixa de e-mail do Diretor Comercial da Vértice. Lê recebidos e enviados e envia e-mails internos (simulados) com anexos do Vértice Drive.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa/email",
+  "keywords": [
+    "email",
+    "e-mail",
+    "mcp",
+    "vertice"
+  ],
+  "mcpServers": {
+    "vertice-mail": {
+      "type": "http",
+      "url": "https://lagunaai.org/api/mcp/mail"
+    }
+  }
+}

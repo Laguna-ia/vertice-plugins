@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vertice-mail",
+  "version": "1.4.0",
+  "description": "Vértice Mail: a caixa de e-mail do Diretor Comercial da Vértice. Lê recebidos e enviados e envia e-mails internos (simulados) com anexos do Vértice Drive.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa/email",
+  "keywords": [
+    "email",
+    "e-mail",
+    "mcp",
+    "vertice"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Vértice Mail",
+        "shortDescription": "Caixa de e-mail do Diretor Comercial",
+        "longDescription": "Conecta o ChatGPT à caixa de e-mail de Rodrigo Sampaio, Diretor Comercial da Vértice: lê recebidos e enviados, com anexos do Vértice Drive, e envia ou responde e-mails para o time interno. Nenhum e-mail sai de verdade: os envios ficam em Enviados, que você vê em lagunaai.org/plataforma/empresa/email. Login pela conta Laguna.",
+        "developerName": "Laguna AI",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://lagunaai.org/plataforma/empresa/email",
+        "privacyPolicyURL": "https://lagunaai.org/plataforma/privacidade",
+        "termsOfServiceURL": "https://lagunaai.org/plataforma/termos",
+        "defaultPrompt": [
+          "Quais e-mails não lidos eu tenho? Resuma o que cada um pede de mim.",
+          "Leia o e-mail do Bruno sobre o Sul e rascunhe uma resposta pedindo o detalhe por conta."
+        ],
+        "brandColor": "#0F6CBD",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

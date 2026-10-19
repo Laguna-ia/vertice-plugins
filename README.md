@@ -7,6 +7,7 @@ Marketplace dos plugins da Vértice, mantido pela [Laguna AI](https://lagunaai.o
 | `vertice-crm` | CRM da Vértice: contas, contatos, oportunidades, atividades, reuniões, documentos e tarefas. Escritas afetam só a sua carteira e pedem sua aprovação. | `https://lagunaai.org/api/mcp/crm` |
 | `vertice-pulso` | Dados de uso do produto (contas, usuários, convites, eventos, integrações, logs e limites contratados) em SQL somente leitura. | `https://lagunaai.org/api/mcp/produto` |
 | `vertice-drive` | Drive da Vértice: arquivos da empresa (somente leitura) e a sua pasta Meus arquivos, onde o assistente salva documentos (DOCX no modelo Vértice), planilhas e textos. | `https://lagunaai.org/api/mcp/drive` |
+| `vertice-mail` | Caixa de e-mail do Diretor Comercial da Vértice: lê recebidos e enviados, com anexos do Drive, e envia ou responde e-mails internos. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/mail` |
 
 > **Credenciais:** os plugins não guardam token, senha nem chave. O acesso é feito por OAuth: na primeira vez que o plugin é usado, você entra com a sua conta Laguna e o ChatGPT/Claude guarda a autorização do seu lado. Nada de credencial deve ser commitado neste repositório (ele é público).
 
@@ -16,7 +17,7 @@ Recomendado: os plugins se atualizam sozinhos a cada nova versão publicada aqui
 
 1. Em **Workspace settings > Plugins**, clique em **Add > Import marketplace**.
 2. Cole a URL do repositório: `https://github.com/Laguna-ia/vertice-plugins`. Deixe o campo de branch vazio (usa `main`).
-3. Os plugins **Vértice CRM**, **Vértice Pulso** e **Vértice Drive** aparecem no diretório de plugins do workspace. O ChatGPT sincroniza o marketplace uma vez por dia; para puxar uma versão nova na hora, use **Sync now**.
+3. Os plugins **Vértice CRM**, **Vértice Pulso**, **Vértice Drive** e **Vértice Mail** aparecem no diretório de plugins do workspace. O ChatGPT sincroniza o marketplace uma vez por dia; para puxar uma versão nova na hora, use **Sync now**.
 4. Se o workspace já tinha os plugins instalados por zip, remova essas instalações antigas para não ficar com dois "Vértice CRM" / "Vértice Pulso".
 5. Cada pessoa, ao usar o plugin pela primeira vez, faz login com a conta Laguna.
 
@@ -29,13 +30,14 @@ No Codex CLI: `codex plugin marketplace add Laguna-ia/vertice-plugins`.
 /plugin install vertice-crm@laguna
 /plugin install vertice-pulso@laguna
 /plugin install vertice-drive@laguna
+/plugin install vertice-mail@laguna
 ```
 
 Pelo terminal: `claude plugin marketplace add Laguna-ia/vertice-plugins` e `claude plugin install vertice-crm@laguna`. Para receber versões novas: `/plugin marketplace update laguna`. No primeiro uso, autorize o servidor MCP (login Laguna) em `/mcp`.
 
 ## Instalar por zip
 
-Para quem não é admin do workspace ou usa ChatGPT Plus/Pro: baixe `vertice-crm.zip`, `vertice-pulso.zip` e `vertice-drive.zip` na página de [Releases](https://github.com/Laguna-ia/vertice-plugins/releases/latest) ou em [lagunaai.org/plataforma/empresa/plugins](https://lagunaai.org/plataforma/empresa/plugins) e siga as instruções de lá. Instalações por zip não se atualizam sozinhas.
+Para quem não é admin do workspace ou usa ChatGPT Plus/Pro: baixe `vertice-crm.zip`, `vertice-pulso.zip`, `vertice-drive.zip` e `vertice-mail.zip` na página de [Releases](https://github.com/Laguna-ia/vertice-plugins/releases/latest) ou em [lagunaai.org/plataforma/empresa/plugins](https://lagunaai.org/plataforma/empresa/plugins) e siga as instruções de lá. Instalações por zip não se atualizam sozinhas.
 
 ## Estrutura
 
