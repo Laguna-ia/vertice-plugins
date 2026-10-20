@@ -36,11 +36,16 @@ Reconheça intenção, incluindo frases coloquiais e erros de digitação. Exemp
 ## Baixar e abrir: procedimento concreto
 
 1. Localize com `search_files` ou `list_files`; reutilize um caminho já confirmado na conversa. Só peça esclarecimento se a escolha do arquivo for ambígua. "Confirmar o caminho" é uma verificação sua, não uma confirmação extra do usuário.
-2. Obtenha o original. Com ferramentas locais de download disponíveis, use `get_download_link` e baixe a URL retornada para o workspace, mantendo nome e extensão. Alternativamente, use `read_file(path, include_file: true)` e materialize o recurso original: se vier como `resource.blob`, decodifique o base64 para um arquivo; se o host já expuser um anexo/arquivo utilizável, use esse anexo. Receber um blob ou uma URL ainda não significa ter um caminho local.
+2. Obtenha o original com `get_download_link` e baixe no mesmo passo, mantendo nome e extensão. Passe a URL **direto do resultado da ferramenta** (`structuredContent.download_url`) para o comando de download, sem copiar nem redigitar: um caractere errado invalida a assinatura e o download devolve um erro em vez do arquivo. Use um download que falhe em erro HTTP. No ChatGPT Work, por exemplo:
+   ```js
+   const d = await tools.mcp__vertice_drive__get_download_link({ path });
+   await tools.exec_command({ cmd: `curl -fLsS '${d.structuredContent.download_url}' -o '<nome do arquivo>'` });
+   ```
+   **Não chame `read_file` para ver um arquivo**: ele devolve o conteúdo extraído (todas as abas como texto), que não é necessário para abrir a cópia. `read_file` com `include_file: true` é só para hosts sem como baixar uma URL; nesse caso ele devolve o original como `resource.blob` (base64), sem o texto extraído, e é preciso decodificá-lo para um arquivo.
 3. Verifique que a cópia existe, tem tamanho/conteúdo compatível e não é uma resposta de erro HTML/JSON. Preserve o original `.xlsx`, `.docx`, `.pptx` ou `.pdf`. Para visualizar, não recrie a planilha a partir de Markdown, não exporte para outro formato e não altere dados ou formatação.
 4. Acione a ferramenta de abertura realmente disponível na sessão. No Codex, quando `open_in_codex` estiver disponível, use `target: {type: "file", path: "<caminho absoluto da cópia existente>"}`. Em outro host, use a ferramenta nativa de Canvas/prévia que estiver exposta, conforme seu contrato. Rótulos da interface como "Abrir prévia" não são ferramentas invocáveis por si só. Não invente ferramentas nem tente visualizar diretamente a URL de storage.
 5. Confira o retorno. Abertura confirmada permite "Abri a planilha na prévia". Resultado apenas enfileirado/solicitado permite "Solicitei a abertura da planilha". Se o host exigir um clique do usuário, entregue o arquivo com a instrução curta para abrir a prévia. Não confunda um card de anexo com abertura confirmada.
-6. Se o download falhar, tente o outro método disponível (`get_download_link` ou `include_file: true`). Se não existir ferramenta de abertura ou houver erro de formato, informe a limitação concreta e entregue a cópia baixada quando possível. Não conclua que a abertura é impossível só porque o Drive é um repositório; a visualização é feita pelo host. Não substitua silenciosamente por tabelas.
+6. Se o download falhar, peça um novo `get_download_link` e repita usando a URL do resultado; só sem como baixar URLs use `read_file` com `include_file: true`. Se não existir ferramenta de abertura ou houver erro de formato, informe a limitação concreta e entregue a cópia baixada quando possível. Não conclua que a abertura é impossível só porque o Drive é um repositório; a visualização é feita pelo host. Não substitua silenciosamente por tabelas.
 
 ## Resposta depois da visualização
 
