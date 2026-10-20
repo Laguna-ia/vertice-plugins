@@ -10,25 +10,25 @@
       "name": "vertice-crm",
       "source": "./plugins/vertice-crm",
       "description": "CRM da Vértice: contas, oportunidades, atividades, reuniões e tarefas.",
-      "version": "1.4.1"
+      "version": "1.4.2"
     },
     {
       "name": "vertice-pulso",
       "source": "./plugins/vertice-pulso",
       "description": "Vértice Pulso: dados de uso do produto da Vértice (contas, usuários, convites, eventos, integrações, logs e limites contratados), em SQL somente leitura.",
-      "version": "1.4.1"
+      "version": "1.4.2"
     },
     {
       "name": "vertice-drive",
       "source": "./plugins/vertice-drive",
       "description": "Vértice Drive: arquivos da empresa (somente leitura) e a sua pasta, onde o assistente salva documentos e planilhas.",
-      "version": "1.4.1"
+      "version": "1.4.2"
     },
     {
       "name": "vertice-mail",
       "source": "./plugins/vertice-mail",
       "description": "Vértice Mail: a caixa de e-mail do Diretor Comercial da Vértice, com envios internos simulados e anexos do Vértice Drive.",
-      "version": "1.4.1"
+      "version": "1.4.2"
     }
   ]
 }
