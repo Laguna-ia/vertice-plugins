@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vertice-mail",
-  "version": "1.4.8",
-  "description": "Vértice Mail: a caixa de e-mail do Diretor Comercial da Vértice. Lê recebidos e enviados e envia e-mails internos (simulados) com anexos do Vértice Drive.",
+  "version": "1.4.9",
+  "description": "Email Vertice: a caixa de e-mail do Diretor Comercial da Vértice, com leitura, contatos, respostas e envios simulados.",
   "author": {
     "name": "Laguna AI",
     "url": "https://lagunaai.org"
@@ -17,9 +17,9 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Vértice Mail",
-        "shortDescription": "E-mail comercial Vértice",
-        "longDescription": "Conecta o ChatGPT à caixa de e-mail de Rodrigo Sampaio, Diretor Comercial da Vértice: lê recebidos e enviados, com anexos do Vértice Drive, e envia ou responde e-mails para o time interno. Nenhum e-mail sai de verdade: os envios ficam em Enviados, que você vê em lagunaai.org/plataforma/empresa/email. Login pela conta Laguna.",
+        "displayName": "Email Vertice",
+        "shortDescription": "Caixa de e-mail da Vértice",
+        "longDescription": "Conecta o ChatGPT à caixa simulada de Rodrigo Sampaio, Diretor Comercial da Vértice: lista e lê mensagens, consulta contatos, envia e responde e-mails internos e marca mensagens como lidas. Envios e respostas ficam em Enviados; nenhum e-mail sai de verdade. Login pela conta Laguna.",
         "developerName": "Laguna AI",
         "category": "Productivity",
         "capabilities": [

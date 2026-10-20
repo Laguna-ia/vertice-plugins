@@ -1,0 +1,5 @@
+interface:
+  display_name: E-mail de teste
+  short_description: Leia, responda e envie e-mails simulados da Vértice
+policy:
+  allow_implicit_invocation: false

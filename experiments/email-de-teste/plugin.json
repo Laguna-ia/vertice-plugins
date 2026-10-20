@@ -1,0 +1,39 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "email-de-teste",
+  "version": "0.1.2",
+  "description": "Leitura, consulta de contatos e envio simulado de e-mails na caixa da Vértice.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa/email",
+  "keywords": [
+    "email",
+    "e-mail",
+    "mcp",
+    "vertice"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "E-mail de teste",
+        "shortDescription": "Leia, responda e envie e-mails da Vértice",
+        "longDescription": "Acesse as seis ferramentas do Mail da Vértice: listar e ler mensagens, consultar contatos, enviar e responder e-mails, e marcar mensagens como lidas. O envio é simulado e registra a mensagem em Enviados da caixa do usuário; não há entrega externa. Requer login OAuth Laguna.",
+        "developerName": "Laguna AI",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://lagunaai.org/plataforma/empresa/email",
+        "privacyPolicyURL": "https://lagunaai.org/plataforma/privacidade",
+        "termsOfServiceURL": "https://lagunaai.org/plataforma/termos",
+        "defaultPrompt": "Verifique meus e-mails recentes e me ajude a responder; mostre o rascunho e aguarde minha confirmação antes de enviar.",
+        "brandColor": "#0F6CBD",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

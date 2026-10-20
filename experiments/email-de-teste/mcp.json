@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "email-de-teste": {
+      "type": "streamable-http",
+      "url": "https://lagunaai.org/api/mcp/mail"
+    }
+  }
+}
