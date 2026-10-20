@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vertice-drive",
-  "version": "1.4.3",
-  "description": "Vértice Drive: arquivos da empresa (somente leitura) e a sua pasta, onde o assistente salva documentos e planilhas.",
+  "version": "1.4.4",
+  "description": "Vértice Drive: arquivos da empresa e a sua pasta, onde o assistente salva documentos e planilhas.",
   "author": {
     "name": "Laguna AI",
     "url": "https://lagunaai.org"
@@ -19,7 +19,7 @@
       "interface": {
         "displayName": "Vértice Drive",
         "shortDescription": "Arquivos da empresa Vértice",
-        "longDescription": "Conecta o ChatGPT ao drive da Vértice: relatórios, reuniões, pesquisas e documentos de deals da empresa (somente leitura), com planilhas e documentos já extraídos para leitura. Salva documentos (DOCX no modelo visual da Vértice), planilhas e textos na sua pasta Meus arquivos, que você vê em lagunaai.org/plataforma/empresa/drive. Login pela conta Laguna.",
+        "longDescription": "Conecta o ChatGPT ao drive da Vértice: relatórios, reuniões, pesquisas e documentos de deals da empresa, com planilhas e documentos já extraídos para leitura. Salva documentos (DOCX no modelo visual da Vértice), planilhas e textos na sua pasta Meus arquivos, que você vê em lagunaai.org/plataforma/empresa/drive. Login pela conta Laguna.",
         "developerName": "Laguna AI",
         "category": "Productivity",
         "capabilities": [

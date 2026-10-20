@@ -6,7 +6,7 @@ Marketplace dos plugins da Vértice, mantido pela [Laguna AI](https://lagunaai.o
 | --- | --- | --- |
 | `vertice-crm` | CRM da Vértice: contas, contatos, oportunidades, atividades, reuniões, documentos e tarefas. Escritas afetam só a sua carteira e pedem sua aprovação. | `https://lagunaai.org/api/mcp/crm` |
 | `vertice-pulso` | Dados de uso do produto (contas, usuários, convites, eventos, integrações, logs e limites contratados) em SQL somente leitura. | `https://lagunaai.org/api/mcp/produto` |
-| `vertice-drive` | Drive da Vértice: arquivos da empresa (somente leitura) e a sua pasta Meus arquivos, onde o assistente salva documentos (DOCX no modelo Vértice), planilhas e textos. | `https://lagunaai.org/api/mcp/drive` |
+| `vertice-drive` | Drive da Vértice: arquivos da empresa e a sua pasta Meus arquivos, onde o assistente salva documentos (DOCX no modelo Vértice), planilhas e textos. | `https://lagunaai.org/api/mcp/drive` |
 | `vertice-mail` | Caixa de e-mail do Diretor Comercial da Vértice: lê recebidos e enviados, com anexos do Drive, e envia ou responde e-mails internos. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/mail` |
 
 > **Credenciais:** os plugins não guardam token, senha nem chave. O acesso é feito por OAuth: na primeira vez que o plugin é usado, você entra com a sua conta Laguna e o ChatGPT/Claude guarda a autorização do seu lado. Nada de credencial deve ser commitado neste repositório (ele é público).

@@ -1,6 +1,6 @@
 {
   "name": "vertice-pulso",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Vértice Pulso: dados de uso do produto da Vértice (contas, usuários, convites, eventos, integrações, logs e limites contratados), em SQL somente leitura.",
   "author": {
     "name": "Laguna AI",
