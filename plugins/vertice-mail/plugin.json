@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vertice-mail",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Vértice Mail: a caixa de e-mail do Diretor Comercial da Vértice. Lê recebidos e enviados e envia e-mails internos (simulados) com anexos do Vértice Drive.",
   "author": {
     "name": "Laguna AI",
