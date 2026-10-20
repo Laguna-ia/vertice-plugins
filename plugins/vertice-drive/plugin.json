@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vertice-drive",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Vértice Drive: arquivos da empresa e a sua pasta, onde o assistente salva documentos e planilhas.",
   "author": {
     "name": "Laguna AI",
