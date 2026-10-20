@@ -1,6 +1,6 @@
 {
   "name": "vertice-mail",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Vértice Mail: a caixa de e-mail do Diretor Comercial da Vértice. Lê recebidos e enviados e envia e-mails internos (simulados) com anexos do Vértice Drive.",
   "author": {
     "name": "Laguna AI",
