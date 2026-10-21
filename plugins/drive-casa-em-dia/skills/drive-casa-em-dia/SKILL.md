@@ -72,7 +72,7 @@ O texto de `read_file` serve para consulta e análise. Ter recebido tabelas por 
 O servidor MCP `drive-casa-em-dia` expõe duas pastas:
 
 - **Casa em Dia/**: arquivos oficiais da empresa (campanhas, pesquisas, relatórios, planos de assinatura, reuniões), vistos por todos. É **somente leitura** para participantes: só os instrutores gravam aqui. Você não cria, altera nem substitui nada nesta pasta.
-- **Meus arquivos/**: pasta do usuário, onde os resultados salvos aparecem em lagunaai.org/plataforma/empresa/drive.
+- **Meus arquivos/**: pasta do usuário, onde os resultados salvos aparecem em lagunaai.org/plataforma/empresa/casa-em-dia/drive.
 
 Se uma ferramenta responder "Autorização necessária: conecte sua conta Laguna", oriente a conectar no plugin, seção MCPs, **Connect**, entrar com a conta Laguna e clicar em **Permitir**. Depois, repita a chamada.
 

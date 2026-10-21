@@ -7,7 +7,7 @@
     "name": "Laguna AI",
     "url": "https://lagunaai.org"
   },
-  "homepage": "https://lagunaai.org/plataforma/empresa/drive",
+  "homepage": "https://lagunaai.org/plataforma/empresa/casa-em-dia/drive",
   "keywords": [
     "drive",
     "arquivos",
@@ -19,14 +19,14 @@
       "interface": {
         "displayName": "Drive Casa em Dia",
         "shortDescription": "Arquivos da empresa Casa em Dia",
-        "longDescription": "Conecta o ChatGPT ao drive da Casa em Dia, empresa de manutenção residencial com planos de assinatura: campanhas, pesquisas, relatórios e materiais de marketing da empresa, com planilhas e documentos já extraídos para leitura. A pasta da empresa é somente leitura; o assistente salva documentos (DOCX), planilhas e textos na sua pasta Meus arquivos, que você vê em lagunaai.org/plataforma/empresa/drive. Login pela conta Laguna.",
+        "longDescription": "Conecta o ChatGPT ao drive da Casa em Dia, empresa de manutenção residencial com planos de assinatura: campanhas, pesquisas, relatórios e materiais de marketing da empresa, com planilhas e documentos já extraídos para leitura. A pasta da empresa é somente leitura; o assistente salva documentos (DOCX), planilhas e textos na sua pasta Meus arquivos, que você vê em lagunaai.org/plataforma/empresa/casa-em-dia/drive. Login pela conta Laguna.",
         "developerName": "Laguna AI",
         "category": "Productivity",
         "capabilities": [
           "Read",
           "Write"
         ],
-        "websiteURL": "https://lagunaai.org/plataforma/empresa/drive",
+        "websiteURL": "https://lagunaai.org/plataforma/empresa/casa-em-dia/drive",
         "privacyPolicyURL": "https://lagunaai.org/plataforma/privacidade",
         "termsOfServiceURL": "https://lagunaai.org/plataforma/termos",
         "defaultPrompt": [
