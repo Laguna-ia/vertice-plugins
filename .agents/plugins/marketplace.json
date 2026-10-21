@@ -51,6 +51,30 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "drive-casa-em-dia",
+      "source": {
+        "source": "local",
+        "path": "./plugins/drive-casa-em-dia"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "email-casa-em-dia",
+      "source": {
+        "source": "local",
+        "path": "./plugins/email-casa-em-dia"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }

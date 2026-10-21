@@ -1,0 +1,22 @@
+{
+  "name": "drive-casa-em-dia",
+  "version": "1.5.0",
+  "description": "Drive Casa em Dia: arquivos da empresa e a sua pasta, onde o assistente salva documentos e planilhas.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa/drive",
+  "keywords": [
+    "drive",
+    "arquivos",
+    "mcp",
+    "casa-em-dia"
+  ],
+  "mcpServers": {
+    "drive-casa-em-dia": {
+      "type": "http",
+      "url": "https://lagunaai.org/api/mcp/casa-em-dia/drive"
+    }
+  }
+}

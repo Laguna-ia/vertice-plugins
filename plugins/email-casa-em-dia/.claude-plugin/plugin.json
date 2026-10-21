@@ -1,0 +1,22 @@
+{
+  "name": "email-casa-em-dia",
+  "version": "1.5.0",
+  "description": "Email Casa em Dia: caixa simulada da Casa em Dia com leitura, contatos, respostas e envios.",
+  "author": {
+    "name": "Laguna AI",
+    "url": "https://lagunaai.org"
+  },
+  "homepage": "https://lagunaai.org/plataforma/empresa/email",
+  "keywords": [
+    "email",
+    "e-mail",
+    "mcp",
+    "casa-em-dia"
+  ],
+  "mcpServers": {
+    "email-casa-em-dia": {
+      "type": "http",
+      "url": "https://lagunaai.org/api/mcp/casa-em-dia/mail"
+    }
+  }
+}

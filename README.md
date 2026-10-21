@@ -1,13 +1,24 @@
-# Plugins Vértice
+# Plugins dos workshops Laguna
 
-Marketplace dos plugins da Vértice, mantido pela [Laguna AI](https://lagunaai.org). Este repositório serve os mesmos plugins para o **ChatGPT** (Business/Enterprise, Codex) e para o **Claude** (Claude Code).
+Marketplace dos plugins usados nos workshops da [Laguna AI](https://lagunaai.org). Cada workshop tem a sua empresa fictícia, e toda empresa tem ao menos Drive e e-mail. Este repositório serve os mesmos plugins para o **ChatGPT** (Business/Enterprise, Codex) e para o **Claude** (Claude Code).
 
-| Plugin | O que faz | Servidor MCP |
-| --- | --- | --- |
-| `vertice-crm` | CRM da Vértice: contas, contatos, oportunidades, atividades, reuniões, documentos e tarefas. Escritas afetam só a sua carteira e pedem sua aprovação. | `https://lagunaai.org/api/mcp/crm` |
-| `vertice-pulso` | Dados de uso do produto (contas, usuários, convites, eventos, integrações, logs e limites contratados) em SQL somente leitura. | `https://lagunaai.org/api/mcp/produto` |
-| `vertice-drive` | Drive da Vértice: arquivos da empresa e a sua pasta Meus arquivos, onde o assistente salva documentos (DOCX no modelo Vértice), planilhas e textos. | `https://lagunaai.org/api/mcp/drive` |
-| `vertice-mail` | Email Vertice: caixa de e-mail do Diretor Comercial da Vértice, com leitura, contatos, respostas e envios simulados. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/mail` |
+Regra de nomes: os plugins de Drive e e-mail aparecem como **Drive &lt;Empresa&gt;** e **Email &lt;Empresa&gt;**. O nome técnico (pasta, manifests, marketplaces e chave do servidor MCP) não muda depois de publicado, para que as instalações existentes continuem se atualizando.
+
+### Vértice (workshop de vendas)
+
+| Plugin | Nome exibido | O que faz | Servidor MCP |
+| --- | --- | --- | --- |
+| `vertice-crm` | Vértice CRM | CRM da Vértice: contas, contatos, oportunidades, atividades, reuniões, documentos e tarefas. Escritas afetam só a sua carteira e pedem sua aprovação. | `https://lagunaai.org/api/mcp/crm` |
+| `vertice-pulso` | Vértice Pulso | Dados de uso do produto (contas, usuários, convites, eventos, integrações, logs e limites contratados) em SQL somente leitura. | `https://lagunaai.org/api/mcp/produto` |
+| `vertice-drive` | Drive Vértice | Drive da Vértice: arquivos da empresa e a sua pasta Meus arquivos, onde o assistente salva documentos (DOCX no modelo Vértice), planilhas e textos. | `https://lagunaai.org/api/mcp/drive` |
+| `vertice-mail` | Email Vértice | Caixa de e-mail do Diretor Comercial da Vértice, com leitura, contatos, respostas e envios simulados. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/mail` |
+
+### Casa em Dia (workshop de marketing)
+
+| Plugin | Nome exibido | O que faz | Servidor MCP |
+| --- | --- | --- | --- |
+| `drive-casa-em-dia` | Drive Casa em Dia | Drive da Casa em Dia (manutenção residencial com planos de assinatura): a pasta `Casa em Dia/` é somente leitura para participantes (só instrutores gravam); o assistente salva documentos, planilhas e textos em Meus arquivos. | `https://lagunaai.org/api/mcp/casa-em-dia/drive` |
+| `email-casa-em-dia` | Email Casa em Dia | Caixa de e-mail de Lívia Andrade, Head de Marketing da Casa em Dia, com leitura, contatos, respostas e envios simulados. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/casa-em-dia/mail` |
 
 > **Credenciais:** os plugins não guardam token, senha nem chave. O acesso é feito por OAuth: na primeira vez que o plugin é usado, você entra com a sua conta Laguna e o ChatGPT/Claude guarda a autorização do seu lado. Nada de credencial deve ser commitado neste repositório (ele é público).
 
@@ -16,28 +27,34 @@ Marketplace dos plugins da Vértice, mantido pela [Laguna AI](https://lagunaai.o
 Recomendado: os plugins se atualizam sozinhos a cada nova versão publicada aqui.
 
 1. Em **Workspace settings > Plugins**, clique em **Add > Import marketplace**.
-2. Cole a URL do repositório: `https://github.com/Laguna-ia/vertice-plugins`. Deixe o campo de branch vazio (usa `main`).
-3. Os plugins **Vértice CRM**, **Vértice Pulso**, **Vértice Drive** e **Email Vertice** aparecem no diretório de plugins do workspace. O ChatGPT sincroniza o marketplace uma vez por dia; para puxar uma versão nova na hora, use **Sync now**.
-4. Se o workspace já tinha plugins instalados por ZIP, remova as instalações antigas do mesmo plugin para evitar duplicatas, inclusive versões antigas do **Email Vertice**.
+2. Cole a URL do repositório: `https://github.com/Laguna-ia/workshop-plugins`. Deixe o campo de branch vazio (usa `main`).
+3. Os plugins **Vértice CRM**, **Vértice Pulso**, **Drive Vértice**, **Email Vértice**, **Drive Casa em Dia** e **Email Casa em Dia** aparecem no diretório de plugins do workspace. Ative só os da empresa do workshop em andamento, se preferir. O ChatGPT sincroniza o marketplace uma vez por dia; para puxar uma versão nova na hora, use **Sync now**.
+4. Se o workspace já tinha plugins instalados por ZIP, remova as instalações antigas do mesmo plugin para evitar duplicatas, inclusive versões antigas com os nomes **Vértice Drive**, **Vértice Mail** ou **Email Vertice**. Se o workspace importou o marketplace pela URL antiga (`vertice-plugins`), o GitHub redireciona, mas vale reimportar pela URL nova.
 5. Cada pessoa, ao usar o plugin pela primeira vez, faz login com a conta Laguna.
 
-No Codex CLI: `codex plugin marketplace add Laguna-ia/vertice-plugins`.
+No Codex CLI: `codex plugin marketplace add Laguna-ia/workshop-plugins`.
 
 ## Instalar no Claude (Claude Code)
 
 ```text
-/plugin marketplace add Laguna-ia/vertice-plugins
+/plugin marketplace add Laguna-ia/workshop-plugins
+
+# Vértice
 /plugin install vertice-crm@laguna
 /plugin install vertice-pulso@laguna
 /plugin install vertice-drive@laguna
 /plugin install vertice-mail@laguna
+
+# Casa em Dia
+/plugin install drive-casa-em-dia@laguna
+/plugin install email-casa-em-dia@laguna
 ```
 
-Pelo terminal: `claude plugin marketplace add Laguna-ia/vertice-plugins` e `claude plugin install vertice-crm@laguna`. Para receber versões novas: `/plugin marketplace update laguna`. No primeiro uso, autorize o servidor MCP (login Laguna) em `/mcp`.
+Pelo terminal: `claude plugin marketplace add Laguna-ia/workshop-plugins` e `claude plugin install vertice-crm@laguna`. Para receber versões novas: `/plugin marketplace update laguna`. No primeiro uso, autorize o servidor MCP (login Laguna) em `/mcp`.
 
 ## Instalar por zip
 
-Para quem não é admin do workspace ou usa ChatGPT Plus/Pro: baixe `vertice-crm.zip`, `vertice-pulso.zip`, `vertice-drive.zip` e `vertice-mail.zip` na página de [Releases](https://github.com/Laguna-ia/vertice-plugins/releases/latest) ou em [lagunaai.org/plataforma/empresa/plugins](https://lagunaai.org/plataforma/empresa/plugins) e siga as instruções de lá. Instalações por zip não se atualizam sozinhas.
+Para quem não é admin do workspace ou usa ChatGPT Plus/Pro: baixe o zip de cada plugin (`vertice-crm.zip`, `vertice-pulso.zip`, `vertice-drive.zip`, `vertice-mail.zip`, `drive-casa-em-dia.zip`, `email-casa-em-dia.zip`) na página de [Releases](https://github.com/Laguna-ia/workshop-plugins/releases/latest) ou em [lagunaai.org/plataforma/empresa/plugins](https://lagunaai.org/plataforma/empresa/plugins) e siga as instruções de lá. Instalações por zip não se atualizam sozinhas.
 
 ## Estrutura
 
@@ -54,7 +71,7 @@ scripts/build-zips.sh                gera dist/<nome>.zip (mesmo layout dos zips
 scripts/check-versions.sh            confere se as versões dos manifests batem
 ```
 
-O nome técnico de cada plugin é o mesmo na pasta, nos manifests e nos dois marketplaces. O plugin mantém o identificador `vertice-mail` para atualizar instalações existentes; seu nome exibido passa a ser **Email Vertice**. O pacote privado de teste continua guardado em `experiments/`, fora dos índices ativos.
+O nome técnico de cada plugin é o mesmo na pasta, nos manifests e nos dois marketplaces. Os plugins da Vértice mantêm os identificadores `vertice-drive` e `vertice-mail` para atualizar instalações existentes; os nomes exibidos passam a ser **Drive Vértice** e **Email Vértice**. Plugins de empresas novas usam `drive-<empresa>` e `email-<empresa>`. O pacote privado de teste continua guardado em `experiments/`, fora dos índices ativos.
 
 ## Lançar uma versão
 
@@ -65,8 +82,8 @@ O nome técnico de cada plugin é o mesmo na pasta, nos manifests e nos dois mar
 5. Para publicar ZIPs, crie e envie uma tag depois do commit:
 
    ```bash
-   git tag v1.2.0
-   git push origin main v1.2.0
+   git tag v1.5.0
+   git push origin main v1.5.0
    ```
 
 6. Este repositório não tem um workflow de GitHub Actions para a release. Depois de gerar `dist/`, publique manualmente o GitHub Release com os arquivos ZIP; se o app também servir os ZIPs em `lagunaai.org`, atualize-os lá.

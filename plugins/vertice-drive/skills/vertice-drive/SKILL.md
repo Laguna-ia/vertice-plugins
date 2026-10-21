@@ -3,7 +3,7 @@ name: vertice-drive
 description: Encontre, baixe, abra para visualização e salve arquivos da Vértice. Use quando o usuário pedir Excel, planilha, relatório, documento, apresentação, PDF ou transcrição da empresa, inclusive "traga o Excel para eu ver", "me mostra a planilha" e "abre o arquivo". Pedidos de ver um arquivo priorizam baixar e abrir a cópia no Canvas/prévia disponível.
 ---
 
-# Vértice Drive
+# Drive Vértice
 
 ## Regra principal: ver um arquivo começa pelo arquivo
 
