@@ -75,6 +75,30 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "drive-astral-ecom",
+      "source": {
+        "source": "local",
+        "path": "./plugins/drive-astral-ecom"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "email-astral-ecom",
+      "source": {
+        "source": "local",
+        "path": "./plugins/email-astral-ecom"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }

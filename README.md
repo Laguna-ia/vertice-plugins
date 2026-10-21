@@ -20,6 +20,13 @@ Regra de nomes: os plugins de Drive e e-mail aparecem como **Drive &lt;Empresa&g
 | `drive-casa-em-dia` | Drive Casa em Dia | Drive da Casa em Dia (manutenção residencial com planos de assinatura): a pasta `Casa em Dia/` é somente leitura para participantes (só instrutores gravam); o assistente salva documentos, planilhas e textos em Meus arquivos. | `https://lagunaai.org/api/mcp/casa-em-dia/drive` |
 | `email-casa-em-dia` | Email Casa em Dia | Caixa de e-mail de Lívia Andrade, Head de Marketing da Casa em Dia, com leitura, contatos, respostas e envios simulados. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/casa-em-dia/mail` |
 
+### Astral Ecom (workshop de finanças)
+
+| Plugin | Nome exibido | O que faz | Servidor MCP |
+| --- | --- | --- | --- |
+| `drive-astral-ecom` | Drive Astral Ecom | Drive da Astral Ecom (plataforma de e-commerce para PMEs): a pasta `Astral Ecom/` da Controladoria é somente leitura para participantes (só instrutores gravam); o assistente salva documentos, planilhas e textos em Meus arquivos. | `https://lagunaai.org/api/mcp/astral-ecom/drive` |
+| `email-astral-ecom` | Email Astral Ecom | Caixa de e-mail de Bianca Okuma, Controller da Astral Ecom, com leitura, contatos, respostas e envios simulados. Nenhum e-mail sai de verdade; envios pedem sua aprovação. | `https://lagunaai.org/api/mcp/astral-ecom/mail` |
+
 > **Credenciais:** os plugins não guardam token, senha nem chave. O acesso é feito por OAuth: na primeira vez que o plugin é usado, você entra com a sua conta Laguna e o ChatGPT/Claude guarda a autorização do seu lado. Nada de credencial deve ser commitado neste repositório (ele é público).
 
 ## Instalar no ChatGPT (admin de workspace Business/Enterprise)
@@ -28,7 +35,7 @@ Recomendado: os plugins se atualizam sozinhos a cada nova versão publicada aqui
 
 1. Em **Workspace settings > Plugins**, clique em **Add > Import marketplace**.
 2. Cole a URL do repositório: `https://github.com/Laguna-ia/workshop-plugins`. Deixe o campo de branch vazio (usa `main`).
-3. Os plugins **Vértice CRM**, **Vértice Pulso**, **Drive Vértice**, **Email Vértice**, **Drive Casa em Dia** e **Email Casa em Dia** aparecem no diretório de plugins do workspace. Ative só os da empresa do workshop em andamento, se preferir. O ChatGPT sincroniza o marketplace uma vez por dia; para puxar uma versão nova na hora, use **Sync now**.
+3. Os plugins **Vértice CRM**, **Vértice Pulso**, **Drive Vértice**, **Email Vértice**, **Drive Casa em Dia**, **Email Casa em Dia**, **Drive Astral Ecom** e **Email Astral Ecom** aparecem no diretório de plugins do workspace. Ative só os da empresa do workshop em andamento, se preferir. O ChatGPT sincroniza o marketplace uma vez por dia; para puxar uma versão nova na hora, use **Sync now**.
 4. Se o workspace já tinha plugins instalados por ZIP, remova as instalações antigas do mesmo plugin para evitar duplicatas, inclusive versões antigas com os nomes **Vértice Drive**, **Vértice Mail** ou **Email Vertice**. Se o workspace importou o marketplace pela URL antiga (`vertice-plugins`), o GitHub redireciona, mas vale reimportar pela URL nova.
 5. Cada pessoa, ao usar o plugin pela primeira vez, faz login com a conta Laguna.
 
@@ -48,13 +55,17 @@ No Codex CLI: `codex plugin marketplace add Laguna-ia/workshop-plugins`.
 # Casa em Dia
 /plugin install drive-casa-em-dia@laguna
 /plugin install email-casa-em-dia@laguna
+
+# Astral Ecom
+/plugin install drive-astral-ecom@laguna
+/plugin install email-astral-ecom@laguna
 ```
 
 Pelo terminal: `claude plugin marketplace add Laguna-ia/workshop-plugins` e `claude plugin install vertice-crm@laguna`. Para receber versões novas: `/plugin marketplace update laguna`. No primeiro uso, autorize o servidor MCP (login Laguna) em `/mcp`.
 
 ## Instalar por zip
 
-Para quem não é admin do workspace ou usa ChatGPT Plus/Pro: baixe o zip de cada plugin (`vertice-crm.zip`, `vertice-pulso.zip`, `vertice-drive.zip`, `vertice-mail.zip`, `drive-casa-em-dia.zip`, `email-casa-em-dia.zip`) na página de [Releases](https://github.com/Laguna-ia/workshop-plugins/releases/latest) ou em [lagunaai.org/plataforma/empresa/plugins](https://lagunaai.org/plataforma/empresa/plugins) e siga as instruções de lá. Instalações por zip não se atualizam sozinhas.
+Para quem não é admin do workspace ou usa ChatGPT Plus/Pro: baixe o zip de cada plugin (`vertice-crm.zip`, `vertice-pulso.zip`, `vertice-drive.zip`, `vertice-mail.zip`, `drive-casa-em-dia.zip`, `email-casa-em-dia.zip`, `drive-astral-ecom.zip`, `email-astral-ecom.zip`) na página de [Releases](https://github.com/Laguna-ia/workshop-plugins/releases/latest) ou em [lagunaai.org/plataforma/empresa/plugins](https://lagunaai.org/plataforma/empresa/plugins) e siga as instruções de lá. Instalações por zip não se atualizam sozinhas.
 
 ## Estrutura
 
@@ -82,8 +93,8 @@ O nome técnico de cada plugin é o mesmo na pasta, nos manifests e nos dois mar
 5. Para publicar ZIPs, crie e envie uma tag depois do commit:
 
    ```bash
-   git tag v1.5.0
-   git push origin main v1.5.0
+   git tag v1.6.0
+   git push origin main v1.6.0
    ```
 
 6. Este repositório não tem um workflow de GitHub Actions para a release. Depois de gerar `dist/`, publique manualmente o GitHub Release com os arquivos ZIP; se o app também servir os ZIPs em `lagunaai.org`, atualize-os lá.
