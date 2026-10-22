@@ -93,8 +93,8 @@ O nome técnico de cada plugin é o mesmo na pasta, nos manifests e nos dois mar
 5. Para publicar ZIPs, crie e envie uma tag depois do commit:
 
    ```bash
-   git tag v1.6.0
-   git push origin main v1.6.0
+   git tag v1.6.1
+   git push origin main v1.6.1
    ```
 
 6. Este repositório não tem um workflow de GitHub Actions para a release. Depois de gerar `dist/`, publique manualmente o GitHub Release com os arquivos ZIP; se o app também servir os ZIPs em `lagunaai.org`, atualize-os lá.
