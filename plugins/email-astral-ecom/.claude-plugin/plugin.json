@@ -1,7 +1,7 @@
 {
   "name": "email-astral-ecom",
-  "version": "1.6.1",
-  "description": "Email Astral Ecom: caixa simulada da Astral Ecom com leitura, contatos, respostas e envios.",
+  "version": "1.6.2",
+  "description": "Email Astral Ecom: caixa de e-mail da Astral Ecom com leitura, contatos, respostas e envio de mensagens.",
   "author": {
     "name": "Laguna AI",
     "url": "https://lagunaai.org"

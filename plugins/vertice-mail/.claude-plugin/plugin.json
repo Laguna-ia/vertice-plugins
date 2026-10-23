@@ -1,7 +1,7 @@
 {
   "name": "vertice-mail",
-  "version": "1.6.1",
-  "description": "Email Vértice: caixa simulada da Vértice com leitura, contatos, respostas e envios.",
+  "version": "1.6.2",
+  "description": "Email Vértice: caixa de e-mail da Vértice com leitura, contatos, respostas e envio de mensagens.",
   "author": {
     "name": "Laguna AI",
     "url": "https://lagunaai.org"
